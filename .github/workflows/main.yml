@@ -1,8 +1,0 @@
-on: [push, pull_request]
-name: Date to console
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print date to console
-        run: date +"%Y-%m-%d %T"
