@@ -1,0 +1,8 @@
+on: [push, pull_request]
+name: CI date to console
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Date to console
+        run: date +"%Y-%m-%d %T"
