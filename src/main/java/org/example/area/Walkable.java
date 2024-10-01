@@ -1,5 +1,5 @@
 package org.example.area;
 
-public interface Terrestrial {
+public interface Walkable {
     void walk();
 }

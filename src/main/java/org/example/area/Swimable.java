@@ -1,5 +1,5 @@
 package org.example.area;
 
-public interface Waterfowl {
+public interface Swimable {
     void swim();
 }

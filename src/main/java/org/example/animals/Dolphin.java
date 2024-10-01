@@ -1,9 +1,9 @@
 package org.example.animals;
 
-import org.example.area.Waterfowl;
+import org.example.area.Swimable;
 import org.example.supply.Predators;
 
-public class Dolphin extends Predators implements Waterfowl {
+public class Dolphin extends Predators implements Swimable {
 
     public Dolphin() {
         super("Дельфин");

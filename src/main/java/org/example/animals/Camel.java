@@ -1,9 +1,9 @@
 package org.example.animals;
 
-import org.example.area.Terrestrial;
+import org.example.area.Walkable;
 import org.example.supply.Herbivores;
 
-public class Camel extends Herbivores implements Terrestrial {
+public class Camel extends Herbivores implements Walkable {
 
     public Camel() {
         super("Верблюд");

@@ -1,9 +1,9 @@
 package org.example.supply;
 
-public abstract class DefaultType {
+public abstract class Animal {
     private final String animalType;
 
-    public DefaultType(String animalType) {
+    public Animal(String animalType) {
         this.animalType = animalType;
     }
 

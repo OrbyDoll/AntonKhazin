@@ -1,6 +1,6 @@
 package org.example.supply;
 
-public class Herbivores extends DefaultType{
+public abstract class Herbivores extends Animal{
 
     public Herbivores(String animalType) {
         super(animalType);
