@@ -1,5 +1,11 @@
 package CustomArrayList;
 
 public interface Removeable<T> {
-  T remove(int index);
+  /**
+   * Удаляет элемент по индексу, смещая последующие элементы влево.
+   *
+   * @param removeIndex индекс элемента, который нужно удалить.
+   * @return удаленный элемент.
+   */
+  T remove(int removeIndex);
 }

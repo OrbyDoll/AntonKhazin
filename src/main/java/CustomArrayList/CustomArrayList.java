@@ -1,6 +1,13 @@
 package CustomArrayList;
 import java.util.Arrays;
 
+/**
+ * CustomArrayList — это кастомная реализация структуры данных ArrayList.
+ * Она предоставляет динамический массив, позволяя автоматически изменять
+ * размер и хранить объекты любого типа.
+ *
+ * @param <T> тип элементов в этом списке
+ */
 public class CustomArrayList<T> implements Addable<T>, Getable<T>, Removeable<T>{
   private Object[] elements;
   private int size;
@@ -32,22 +39,23 @@ public class CustomArrayList<T> implements Addable<T>, Getable<T>, Removeable<T>
   }
 
   /**
-   Получает элемент по индексу.
-
-   @param getIndex индекс элемента.
-   @return элемент по указанному индексу.
+   * Получает элемент по индексу.
+   *
+   * @param getIndex индекс элемента.
+   * @return элемент по указанному индексу.
    */
+  @Override
   public T get(int getIndex) {
     return (T) elements[getIndex];
   }
 
   /**
-   Удаляет элемент по индексу, смещая последующие элементы влево.
-
-   @param removeIndex индекс элемента, который нужно удалить.
-   @return удаленный элемент.
-   @throws IndexOutOfBoundsException если индекс вне диапазона.
+   * Удаляет элемент по индексу, смещая последующие элементы влево.
+   *
+   * @param removeIndex индекс элемента, который нужно удалить.
+   * @return удаленный элемент.
    */
+  @Override
   public T remove(int removeIndex) {
     T removedElement = (T) elements[removeIndex];
     for (int i = removeIndex; i < size - 1; i++) {
