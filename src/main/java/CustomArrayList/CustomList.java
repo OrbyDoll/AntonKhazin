@@ -1,5 +1,10 @@
 package CustomArrayList;
 
+/**
+ * Интерфейс для реализации ArrayList
+ *
+ * @param <T> тип элементов в массиве
+ */
 public interface CustomList<T> {
 
   /**
