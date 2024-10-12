@@ -8,7 +8,7 @@ import java.util.Arrays;
  *
  * @param <T> тип элементов в этом списке
  */
-public class CustomArrayList<T> implements Addable<T>, Getable<T>, Removeable<T>{
+public class CustomArrayList<T> implements CustomList<T>{
   private Object[] elements;
   private int size;
 
