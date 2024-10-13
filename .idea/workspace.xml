@@ -6,19 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="75670317-adb5-4c13-a981-02da0600fd70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BubbleSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BubbleSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SorterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/BubbleSortMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/BubbleSortMethod.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/MergeSortMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/MergeSortMethod.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SortTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SortTypes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Sorter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Sorter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SortingMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SortingMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BubbleSortMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BubbleSortMethodTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MergeSortMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MergeSortMethodTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SorterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SorterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,6 +68,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Coverage",
+    "JUnit.MergeSortMethodTest.executor": "Coverage",
+    "JUnit.Unnamed.executor": "Coverage",
     "Maven.Unknown [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feature/unit-tests",
@@ -84,6 +91,16 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,8 +125,10 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AntonKhazin$MergeSortMethodTest.ic" NAME="MergeSortMethodTest Coverage Results" MODIFIED="1728848221609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/AntonKhazin$Main.ic" NAME="Main Coverage Results" MODIFIED="1728847134038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.example.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/AntonKhazin$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1728848260985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

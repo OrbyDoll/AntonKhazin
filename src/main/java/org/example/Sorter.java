@@ -24,14 +24,10 @@ public class Sorter {
    * @param list Список для сортировки.
    * @return Отсортированный список.
    */
-  public List<Integer> sort(List<Integer> list, SortTypes type) {
+  public List<Integer> sort(List<Integer> list, SortTypes type) throws Exception {
     for (SortingMethod sortMethod : sortings) {
       if (sortMethod.type().equals(type)) {
-        try {
-          return sortMethod.sort(list);
-        } catch (Exception e) {
-          System.out.println(e.getMessage());
-        }
+        return sortMethod.sort(list);
       }
     }
     return new ArrayList<>();
