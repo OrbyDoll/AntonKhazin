@@ -29,8 +29,7 @@ public class Main {
           sortedList = sorter.sort(list, SortTypes.BUBBLE);
           break;
         default:
-          System.out.println("Неправильный выбор.");
-          return;
+          throw new Exception("Такого типа сортировки не сущетсвует");
       }
       System.out.println("Отсортированный список: " + sortedList);
     } catch (Exception e) {

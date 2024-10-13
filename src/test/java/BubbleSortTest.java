@@ -1,5 +1,4 @@
 import org.example.BubbleSortMethod;
-import org.example.MergeSortMethod;
 import org.example.SortTypes;
 import org.junit.jupiter.api.Test;
 import java.util.List;
@@ -31,5 +30,21 @@ class BubbleSortMethodTest {
   void testGetSortType() {
     BubbleSortMethod bubbleSort = new BubbleSortMethod(3);
     assertEquals(bubbleSort.type(), SortTypes.BUBBLE);
+  }
+
+  @Test
+  public void testSortEmptyList() throws Exception {
+    BubbleSortMethod bubbleSort = new BubbleSortMethod(10);
+    List<Integer> list = List.of();
+    List<Integer> sortedList = bubbleSort.sort(list);
+    assertEquals(List.of(), sortedList);
+  }
+
+  @Test
+  public void testSortSingleElementList() throws Exception {
+    BubbleSortMethod bubbleSort = new BubbleSortMethod(10);
+    List<Integer> list = List.of(5);
+    List<Integer> sortedList = bubbleSort.sort(list);
+    assertEquals(List.of(5), sortedList);
   }
 }
