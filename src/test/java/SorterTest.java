@@ -29,17 +29,4 @@ class SorterTest {
     List<Integer> sortedList = sorter.sort(unsortedList, SortTypes.BUBBLE);
     assertEquals(Arrays.asList(1, 4, 8), sortedList);
   }
-
-  @Test
-  void testSorterThrowsException() {
-    List<SortingMethod> methods = new ArrayList<>();
-    methods.add(new MergeSortMethod(10));
-    Sorter sorter = new Sorter(methods);
-
-    List<Integer> unsortedList = Arrays.asList(1, 2, 3);
-    Exception exception = assertThrows(Exception.class, () -> {
-      sorter.sort(unsortedList, SortTypes.BUBBLE);
-    });
-    assertEquals("Метод сортировки не найден.", exception.getMessage());
-  }
 }

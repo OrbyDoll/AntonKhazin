@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Класс, управляющий сортировками.
- * Принимает список алгоритмов сортировки и пытается отсортировать список каждым из них.
+ * Принимает список алгоритмов сортировки и пытается отсортировать список одним из них.
  */
 public class Sorter {
   private final List<SortingMethod> sortings;
@@ -23,9 +23,8 @@ public class Sorter {
    *
    * @param list Список для сортировки.
    * @return Отсортированный список.
-   * @throws Exception Если ни один алгоритм не может отсортировать список.
    */
-  public List<Integer> sort(List<Integer> list, SortTypes type) throws Exception {
+  public List<Integer> sort(List<Integer> list, SortTypes type) {
     for (SortingMethod sortMethod : sortings) {
       if (sortMethod.type().equals(type)) {
         try {

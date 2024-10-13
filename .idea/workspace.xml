@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75670317-adb5-4c13-a981-02da0600fd70" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/BubbleSortMethodTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/BubbleSortMethodTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/MergeSortMethodTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/MergeSortMethodTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/SorterTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/SorterTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-BubbleSortMethodTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-BubbleSortMethodTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-MergeSortMethodTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-MergeSortMethodTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SorterTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SorterTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BubbleSortMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BubbleSortMethodTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MergeSortMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MergeSortMethodTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SorterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SorterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
