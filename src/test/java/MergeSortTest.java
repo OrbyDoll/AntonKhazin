@@ -1,4 +1,5 @@
 import org.example.MergeSortMethod;
+import org.example.SortTypes;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Arrays;
@@ -23,5 +24,11 @@ class MergeSortMethodTest {
       mergeSort.sort(unsortedList);
     });
     assertEquals("Слишком много элементов для MergeSort. Максимальное количество - 2. Было передано - 3", exception.getMessage());
+  }
+
+  @Test
+  void testGetSortType() {
+    MergeSortMethod mergeSort = new MergeSortMethod(3);
+    assertEquals(mergeSort.type(), SortTypes.MERGE);
   }
 }

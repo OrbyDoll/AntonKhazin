@@ -1,4 +1,6 @@
 import org.example.BubbleSortMethod;
+import org.example.MergeSortMethod;
+import org.example.SortTypes;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Arrays;
@@ -23,5 +25,11 @@ class BubbleSortMethodTest {
       bubbleSort.sort(unsortedList);
     });
     assertEquals("Слишком много элементов для BubbleSort. Максимальное количество - 2. Было передано - 3", exception.getMessage());
+  }
+
+  @Test
+  void testGetSortType() {
+    BubbleSortMethod bubbleSort = new BubbleSortMethod(3);
+    assertEquals(bubbleSort.type(), SortTypes.BUBBLE);
   }
 }
