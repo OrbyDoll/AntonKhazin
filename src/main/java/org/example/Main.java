@@ -1,41 +1,34 @@
 package org.example;
-import java.util.*;
+
+import org.example.Enrichment.MsisdnEnrichment;
+import org.example.Enrichment.EnrichmentProcessor;
+import org.example.Enrichment.EnrichmentService;
+import org.example.Exceptions.InvalidPhoneFormatException;
+import org.example.User.MemoryRepository;
+import org.example.User.Message;
+import org.example.User.User;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    ArrayList<Integer> list = new ArrayList<>();
-    System.out.println("Введите список чисел через пробел");
-    String[] stringList = input.nextLine().split(" ");
-    for (String num : stringList) {
-      list.add(Integer.parseInt(num));
-    }
-    ArrayList<SortingMethod> sorts = new ArrayList<>();
-    sorts.add(new MergeSortMethod(10));
-    sorts.add(new BubbleSortMethod(15));
+  public static void main(String[] args) throws InvalidPhoneFormatException {
+    User me = new User("Anton", "Khazin");
+    MemoryRepository repa = new MemoryRepository();
+    Map<String, String> content = new HashMap<>();
+    ArrayList<EnrichmentProcessor> processors = new ArrayList<>();
 
-    Sorter sorter = new Sorter(sorts);
-    System.out.println("Выберите алгоритм сортировки:\n" +
-                       "1. Сортировка слиянием (MergeSort)\n" +
-                       "2. Пузырьковая сортировка (BubbleSort)");
-    int choice = input.nextInt();
-    List<Integer> sortedList;
-    try {
-      switch (choice) {
-        case 1:
-          sortedList = sorter.sort(list, SortTypes.MERGE);
-          break;
-        case 2:
-          sortedList = sorter.sort(list, SortTypes.BUBBLE);
-          break;
-        default:
-          throw new Exception("Такого типа сортировки не сущетсвует");
-      }
-      System.out.println("Отсортированный список: " + sortedList);
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
-    } finally {
-      input.close();
-    }
+    repa.updateByMSISDN("89201337006", me);
+    content.put("action", "send hometask");
+    content.put("expected assessment", "10");
+    content.put("msisdn", "89201337006");
+    processors.add(new MsisdnEnrichment(repa));
+    Message message = new Message(content, Message.EnrichmentType.MSISDN);
+    EnrichmentService enrichment = new EnrichmentService(processors);
+
+    Message enrichedMessage = enrichment.enrich(message);
+    System.out.println(enrichedMessage.getContent());
   }
 }
