@@ -5,6 +5,7 @@ import org.example.Exceptions.InvalidPhoneFormatException;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Сервис для обогащения сообщений.
@@ -26,7 +27,7 @@ public class EnrichmentService {
    * @param enrichmentProcessors список процессоров обогащения
    */
   public EnrichmentService(List<EnrichmentProcessor> enrichmentProcessors) {
-    this.enrichmentProcessors = enrichmentProcessors;
+    this.enrichmentProcessors = new CopyOnWriteArrayList<>(enrichmentProcessors);
   }
 
   /**

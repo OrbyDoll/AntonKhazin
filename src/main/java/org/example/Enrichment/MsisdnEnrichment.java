@@ -51,7 +51,7 @@ public class MsisdnEnrichment implements EnrichmentProcessor {
    * @throws InvalidPhoneFormatException если формат номера телефона неверен
    */
   @Override
-  public Map<String, String> enrich(Map<String, String> content) throws InvalidPhoneFormatException {
+  public synchronized Map<String, String> enrich(Map<String, String> content) throws InvalidPhoneFormatException {
     String msisdn = content.get("msisdn");
     if (msisdn == null) return content;
 

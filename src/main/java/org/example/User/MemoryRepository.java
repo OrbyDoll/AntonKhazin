@@ -29,7 +29,7 @@ public class MemoryRepository implements UserRepository {
    * @throws InvalidPhoneFormatException если формат номера телефона неверен (null или пустой)
    */
   @Override
-  public User findByMSISDN(String msisdn) throws InvalidPhoneFormatException {
+  public synchronized User findByMSISDN(String msisdn) throws InvalidPhoneFormatException {
     if (msisdn == null || msisdn.isEmpty()) {
       throw new InvalidPhoneFormatException();
     }
@@ -45,7 +45,7 @@ public class MemoryRepository implements UserRepository {
    * @throws InvalidUserException если объект пользователя равен null
    */
   @Override
-  public void updateByMSISDN(String msisdn, User user) throws InvalidPhoneFormatException {
+  public synchronized void updateByMSISDN(String msisdn, User user) throws InvalidPhoneFormatException {
     if (msisdn == null || msisdn.isEmpty()) {
       throw new InvalidPhoneFormatException();
     } else if (user == null) {
