@@ -1,15 +1,15 @@
 package org.example;
 
+import org.example.Enrichment.EnrichmentType;
 import org.example.Enrichment.MsisdnEnrichment;
 import org.example.Enrichment.EnrichmentProcessor;
 import org.example.Enrichment.EnrichmentService;
-import org.example.Exceptions.InvalidPhoneFormatException;
+import org.example.Exception.InvalidPhoneFormatException;
 import org.example.User.MemoryRepository;
 import org.example.User.Message;
 import org.example.User.User;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +25,7 @@ public class Main {
     content.put("expected assessment", "10");
     content.put("msisdn", "89201337006");
     processors.add(new MsisdnEnrichment(repa));
-    Message message = new Message(content, Message.EnrichmentType.MSISDN);
+    Message message = new Message(content, EnrichmentType.MSISDN);
     EnrichmentService enrichment = new EnrichmentService(processors);
 
     Message enrichedMessage = enrichment.enrich(message);

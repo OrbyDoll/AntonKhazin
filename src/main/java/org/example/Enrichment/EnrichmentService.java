@@ -1,7 +1,7 @@
 package org.example.Enrichment;
 
 import org.example.User.Message;
-import org.example.Exceptions.InvalidPhoneFormatException;
+import org.example.Exception.InvalidPhoneFormatException;
 
 import java.util.List;
 import java.util.Map;

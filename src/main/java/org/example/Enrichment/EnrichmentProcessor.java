@@ -1,8 +1,6 @@
 package org.example.Enrichment;
 
-import org.example.User.Message;
-import org.example.Exceptions.InvalidPhoneFormatException;
-
+import org.example.Exception.InvalidPhoneFormatException;
 import java.util.Map;
 
 /**
@@ -20,7 +18,7 @@ public interface EnrichmentProcessor {
    * @param enrichmentType тип обогащения, который необходимо проверить
    * @return {@code true}, если тип обогащения поддерживается, {@code false} в противном случае
    */
-  boolean supports(Message.EnrichmentType enrichmentType);
+  boolean supports(EnrichmentType enrichmentType);
 
   /**
    * Обогащает переданное содержимое, добавляя или изменяя данные в Map.

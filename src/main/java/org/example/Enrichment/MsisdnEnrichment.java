@@ -1,8 +1,7 @@
 package org.example.Enrichment;
 
-import org.example.User.Message;
 import org.example.User.User;
-import org.example.Exceptions.InvalidPhoneFormatException;
+import org.example.Exception.InvalidPhoneFormatException;
 import org.example.User.UserRepository;
 
 import java.util.Map;
@@ -34,12 +33,12 @@ public class MsisdnEnrichment implements EnrichmentProcessor {
    * Проверяет, поддерживает ли процессор указанный тип обогащения.
    *
    * @param enrichmentType тип обогащения, который необходимо проверить
-   * @return {@code true}, если тип обогащения равен {@link Message.EnrichmentType#MSISDN},
+   * @return {@code true}, если тип обогащения равен {@link EnrichmentType#MSISDN},
    *         {@code false} в противном случае
    */
   @Override
-  public boolean supports(Message.EnrichmentType enrichmentType) {
-    return enrichmentType == Message.EnrichmentType.MSISDN;
+  public boolean supports(EnrichmentType enrichmentType) {
+    return enrichmentType == EnrichmentType.MSISDN;
   }
 
   /**

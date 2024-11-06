@@ -1,7 +1,7 @@
 package org.example.User;
 
-import org.example.Exceptions.InvalidPhoneFormatException;
-import org.example.Exceptions.InvalidUserException;
+import org.example.Exception.InvalidPhoneFormatException;
+import org.example.Exception.InvalidUserException;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

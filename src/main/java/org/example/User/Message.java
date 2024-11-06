@@ -1,7 +1,7 @@
 package org.example.User;
 
 import java.util.Map;
-
+import org.example.Enrichment.EnrichmentType;
 /**
  * Представляет сообщение с содержимым и типом обогащения.
  * <p>
@@ -49,12 +49,5 @@ public class Message {
    */
   public EnrichmentType getEnrichmentType() {
     return enrichmentType;
-  }
-
-  /**
-   * Перечисление типов обогащения для сообщения.
-   */
-  public enum EnrichmentType {
-    MSISDN
   }
 }

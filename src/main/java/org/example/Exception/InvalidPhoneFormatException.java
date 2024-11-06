@@ -1,4 +1,4 @@
-package org.example.Exceptions;
+package org.example.Exception;
 
 public class InvalidPhoneFormatException extends Exception {
   public InvalidPhoneFormatException() {

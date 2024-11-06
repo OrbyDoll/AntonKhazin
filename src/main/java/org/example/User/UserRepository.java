@@ -1,6 +1,6 @@
 package org.example.User;
 
-import org.example.Exceptions.InvalidPhoneFormatException;
+import org.example.Exception.InvalidPhoneFormatException;
 
 /**
  * Интерфейс для работы с хранилищем пользователей.
