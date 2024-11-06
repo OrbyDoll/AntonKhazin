@@ -1,7 +1,8 @@
 import org.example.User.*;
 import org.example.Enrichment.*;
 import org.example.Exception.*;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,13 +17,13 @@ import java.util.concurrent.Executors;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EnrichmentServiceTest {
-  private UserRepository userRepository = new MemoryRepository();
-  private ArrayList<EnrichmentProcessor> processors = new ArrayList<>();
+  private final UserRepository userRepository = new MemoryRepository();
+  private final ArrayList<EnrichmentProcessor> processors = new ArrayList<>();
   private EnrichmentService service;
   Map<String, String> stringStringMap;
   Message message;
 
-  @Before
+  @BeforeEach
   public void setup() throws InvalidPhoneFormatException {
     userRepository.updateByMSISDN("88005553535", new User("Vasya", "Ivanov"));
     processors.add(new MsisdnEnrichment(userRepository));
@@ -35,7 +36,8 @@ public class EnrichmentServiceTest {
   }
 
   @Test
-  void shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully() throws InterruptedException, InvalidPhoneFormatException {
+  @DisplayName("shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully")
+  void enrichmentTest() throws InterruptedException {
     Message message = new Message(stringStringMap, EnrichmentType.MSISDN);
     List<Message> results = new CopyOnWriteArrayList<>();
     ExecutorService executorService = Executors.newFixedThreadPool(5);
